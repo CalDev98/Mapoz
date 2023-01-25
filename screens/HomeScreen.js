@@ -11,6 +11,8 @@ import {
   Modal,
   TextInput,
 } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
+
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
@@ -109,13 +111,60 @@ const HomeScreen = ({ navigation }) => {
             </View>
           </View>
         </Modal>
+        {/* <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}
+          style={{
+            paddingVertical: 50,
+            opacity: 0.3,
+          }}
+        >
+          <View style={styles.modalInnerContainer}>
+            <View style={styles.modalView}>
+              <Text style={styles.modalText}>Quel est ton nom?</Text>
+              <TextInput
+                onChangeText={(val) => setNom(val)}
+                value={nom}
+                placeholder="Entrer un nom"
+                style={styles.modalInput}
+              />
+              <View style={styles.btnContainer}>
+                <TouchableOpacity
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => {
+                    setNom(nom);
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={styles.textStyle}>Enregistrer</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => setModalVisible(!modalVisible)}
+                >
+                  <Text style={styles.textStyle}>Annuler</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal> */}
       </View>
       <View style={styles.floatBtnContainer}>
         <TouchableOpacity
           style={styles.floatBtn}
           onPress={() => setModalVisible(true)}
         >
-          <Text style={styles.floatBtnText}>+</Text>
+          <Icon name="add" size={30} color="#fff" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.floatBtn}
+          onPress={() => setModalVisible(true)}
+        >
+          <Icon name="settings" size={30} color="#fff" />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -185,10 +234,12 @@ const styles = StyleSheet.create({
   floatBtnContainer: {
     position: "absolute",
     bottom: 0,
+    right: 5,
     padding: 15,
-    width: "100%",
+    height: 210,
+    width: "30%",
     justifyContent: "center",
-    alignItems: "flex-end",
+    alignItems: "center",
   },
   floatBtn: {
     width: 85,
@@ -197,6 +248,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
+    margin: 3,
   },
   floatBtnText: {
     color: "white",
