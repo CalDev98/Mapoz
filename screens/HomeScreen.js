@@ -154,12 +154,12 @@ const HomeScreen = ({ navigation }) => {
         </Modal> */}
       </View>
       <View style={styles.floatBtnContainer}>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={styles.floatBtn}
           onPress={() => setModalVisible(true)}
         >
           <Icon name="add" size={30} color="#fff" />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity
           style={styles.floatBtn}
           onPress={() => setModalVisible(true)}
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 5,
     padding: 15,
-    height: 210,
+    height: 110,
     width: "30%",
     justifyContent: "center",
     alignItems: "center",

@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   },
   text2: {
     paddingHorizontal: 10,
-    fontSize: 22,
+    fontSize: 18,
     // letterSpacing: ,
     lineHeight: 30,
     textAlign: "center",
